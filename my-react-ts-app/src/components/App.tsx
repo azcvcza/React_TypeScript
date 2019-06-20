@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import logo from '../logo.svg';
+import "../css/App.css"
+import Confirm from './Confirm'
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -19,6 +19,7 @@ const App: React.FC = () => {
           Learn React and TypeScript
         </a>
       </header>
+      <Confirm ></Confirm>
     </div>
   );
 }
