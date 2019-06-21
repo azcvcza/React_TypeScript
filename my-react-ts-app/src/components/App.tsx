@@ -19,7 +19,7 @@ const App: React.FC = () => {
           Learn React and TypeScript
         </a>
       </header>
-      <Confirm ></Confirm>
+      <Confirm title="React And TypeScript" content="helo world" ></Confirm>
     </div>
   );
 }
