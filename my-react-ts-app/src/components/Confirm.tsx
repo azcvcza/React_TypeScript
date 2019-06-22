@@ -11,6 +11,13 @@ interface IProps {
 }
 const Confirm: React.SFC<IProps> = (props) => {
 	const [cancelClickCount, setCancelClickCount] = React.useState(0);
+	React.useEffect(() => {
+		console.log("Confirm first rendering");
+		return () => {
+			console.log("Confirm unmounted");
+		};
+	}, []);
+
 	const handleCancelClick = () => {
 		const newCount = cancelClickCount + 1;
 		setCancelClickCount(newCount);
@@ -33,9 +40,9 @@ const Confirm: React.SFC<IProps> = (props) => {
 			</div>
 
 			<div className="confirm-buttons-container">
-			<button className="confirm-cancel" onClick={handleCancelClick}>
- {cancelClickCount === 0 ? props.cancelCaption : "Really?"}
-</button>
+				<button className="confirm-cancel" onClick={handleCancelClick}>
+					{cancelClickCount === 0 ? props.cancelCaption : "Really?"}
+				</button>
 				<button className="confirm-ok" onClick={handleOkClick}>{props.okCaption}</button>
 			</div>
 		</div>

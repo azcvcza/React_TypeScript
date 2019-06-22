@@ -108,15 +108,17 @@ class App extends React.Component<{}, IState> {
         {this.state.confirmVisible && (
           <button onClick={this.handleConfirmClick}>Confirm</button>
         )}
+        {this.state.countDown > 0 && (
+          <Confirm
+            open={this.state.confirmOpen}
+            title="React And TypeScript"
+            content="helo world" okCaption="Okay"
+            cancelCaption="Cancel"
+            onCancelClick={this.handleCancelClick}
+            onOkClick={this.handleOkClick}
+          ></Confirm>
+        )}
 
-        <Confirm
-          open={this.state.confirmOpen}
-          title="React And TypeScript"
-          content="helo world" okCaption="Okay"
-          cancelCaption="Cancel"
-          onCancelClick={this.handleCancelClick}
-          onOkClick={this.handleOkClick}
-        ></Confirm>
       </div>)
   }
 
