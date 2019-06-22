@@ -1,6 +1,7 @@
 import * as React from "react";
 import '../css/Confirm.css'
 interface IProps{
+	open:boolean;
 	title:string;
 	content:string;
 	cancelCaption?:string;
@@ -20,7 +21,7 @@ class Confirm extends React.Component<IProps> {
 		this.props.onOkClick();
 	}
 	public render() {
-		return (<div className="confirm-wrapper confirm-visible">
+		return (<div className={this.props.open?"confirm-wrapper confirm-visible":"confirm-wrapper"}>
 			<div className="confirm-container">
 				<div className="confirm-title-container">
 					<span>{this.props.title}</span>
