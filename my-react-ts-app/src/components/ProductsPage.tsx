@@ -16,12 +16,14 @@ class ProductsPage extends React.Component<{}, IState>{
 		this.setState({ products })
 	}
 	public render() {
-		return (<div className="page-control">
+		return (<div className="page-container">
 			<p>Welcome to React Router</p>
 			<ul className="product-list">
 				{this.state.products.map(product => (
 					<li key={product.id} className="product-list-item">
-						{product.name}
+						<h4>Name:{product.name}</h4>						
+						<h5>Descrption:{product.description}</h5>						
+						<h5>Price:{product.price}</h5>						
 					</li>
 				))}
 			</ul>

@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../logo.svg';
 import "../css/App.css"
 import Confirm from './Confirm'
-
+import Routes from '../router/Routes'
 interface IState {
   confirmOpen: boolean;
   confirmMessage: string;
@@ -90,6 +90,7 @@ class App extends React.Component<{}, IState> {
   public render() {
     return (
       <div className="App">
+         <Routes />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -118,7 +119,7 @@ class App extends React.Component<{}, IState> {
             onOkClick={this.handleOkClick}
           ></Confirm>
         )}
-
+       
       </div>)
   }
 

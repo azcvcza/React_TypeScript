@@ -12,6 +12,18 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+h1 {
+    color: white;
+}
+
+h4 {
+    color: lightgoldenrodyellow
+}
+
+h5 {
+    color: lightgreen
+}
+
 p {
     color: white;
 }
@@ -24,10 +36,21 @@ p {
 
 .product-list {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 2px;
+    padding: 1px;
 }
 
 .product-list-item {
     padding: 5px;
+}
+
+a {
+    color: white;
+    margin: 2px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightgrey;
+    transition: .5s;
 }
