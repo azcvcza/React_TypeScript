@@ -13,7 +13,7 @@ const Confirm: React.SFC<IProps> = (props) => {
 	const [cancelClickCount, setCancelClickCount] = React.useState(0);
 	React.useEffect(() => {
 		console.log("Confirm first rendering");
-		return () => {
+		return () => {``
 			console.log("Confirm unmounted");
 		};
 	}, []);
