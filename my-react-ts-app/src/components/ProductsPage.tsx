@@ -17,7 +17,6 @@ class ProductsPage extends React.Component<{}, IState>{
 	}
 	public render() {
 		return (<div className="page-container">
-			<p>Welcome to React Router</p>
 			<ul className="product-list">
 				{this.state.products.map(product => (
 					<li key={product.id} className="product-list-item">
